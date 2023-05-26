@@ -15,6 +15,13 @@ SIS_fast.available_diags
 !ocean_only/global_ALE/z/available_diags.000000
 !ocean_only/global_ALE/layer/available_diags.000000
 
+out
+*.debugging
+*.layout
+*.short
+*diags
+*truncations
+*.all
 exitcode
 fort.20
 *.nc

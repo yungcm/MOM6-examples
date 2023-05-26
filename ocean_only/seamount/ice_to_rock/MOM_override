@@ -19,11 +19,6 @@
 #override WESTLON = 320.0                 !   [k] default = 0.0
 #override LENLON = 480.0                  !   [k]
 
-!#override TOPO_CONFIG = "ISOMIP"
-#override TOPO_CONFIG = "flat"
-!#override TOPO_CONFIG = "file"
-#override TOPO_FILE = "topogX.nc"
-
 #override MAXIMUM_DEPTH = 720.0           !   [m]
 
 #override DT = 300.0
@@ -55,7 +50,14 @@
 !#override BT_THICK_SCHEME = "FROM_BT_CONT"
 !#override BBL_THICK_MIN = 2.0
 
-!!!!!!!!!!!!!!!!!  Thickness from  file??   !!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!#override TOPO_CONFIG = "ISOMIP"
+#override TOPO_CONFIG = "flat"
+!#override TOPO_CONFIG = "file"
+!#override TOPO_FILE = "topogX.nc"
+
+!!!!!!!!!!!!!!!!!  Thickness from  file   !!!!!!!!
 
 !#override ADJUST_SALT = True
 
