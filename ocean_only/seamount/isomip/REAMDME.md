@@ -1,6 +1,6 @@
-### Pseudo ISOMIP
+### ISOMIP
 
-1. Create new shelf file "INPUT/shelfX.nc" using make_shelf()
+1. Make a symmetric version of the Ocean1 ice shelf in "/INPUT/shelfX.nc" using symmetrize_ocean1()
 
 2. Do a short run with THICKNESS_CONFIG = "ISOMIP"
 

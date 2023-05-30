@@ -1,4 +1,4 @@
-### ISOMIP float
+### ISOMIP flat
 
 1. Make a symmetric version of the Ocean1 ice shelf in "/INPUT/shelfX.nc" using symmetrize_ocean1()
 
