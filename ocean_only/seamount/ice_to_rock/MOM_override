@@ -50,6 +50,8 @@
 !#override BT_THICK_SCHEME = "FROM_BT_CONT"
 !#override BBL_THICK_MIN = 2.0
 
+#override KH = 6.0
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !#override TOPO_CONFIG = "ISOMIP"

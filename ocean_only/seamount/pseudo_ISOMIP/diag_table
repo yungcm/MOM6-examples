@@ -1,11 +1,12 @@
 "GOLD Experiment"
 1 1 1 0 0 0
-#"prog",     300,"seconds",1,"days","Time"
-#"mom",     300,"seconds",1,"days","Time"
-#"forcing",     300,"seconds",1,"days","Time"
-"prog",     1,"hours",1,"days","Time"
-"mom",     1,"hours",1,"days","Time"
-"forcing",     1,"hours",1,"days","Time"
+"prog",     300,"seconds",1,"days","Time"
+"mom",     300,"seconds",1,"days","Time"
+"forcing",     300,"seconds",1,"days","Time"
+"ice",     300,"seconds",1,"days","Time"
+#"prog",     1,"hours",1,"days","Time"
+#"mom",     1,"hours",1,"days","Time"
+#"forcing",     1,"hours",1,"days","Time"
 #"ave_prog", 5,"days",1,"days","Time",365,"days"
 #"cont_%4yr_%3dy",     5,"days",1,"days","Time",365,"days"
 #"mom_%4yr_%3dy",      5,"days",1,"days","Time",10,"days"
@@ -79,6 +80,7 @@
 "ocean_model","dudt","dudt","mom","all",.false.,"none",1
 "ocean_model","CAu","CAu","mom","all",.false.,"none",1
 "ocean_model","PFu","PFu","mom","all",.false.,"none",1
+"ocean_model","PFv","PFv","mom","all",.false.,"none",1
 
 #"ocean_model","dudt","dudt","mom_%4yr_%3dy","all",.true.,"none",2
 #"ocean_model","dvdt","dvdt","mom_%4yr_%3dy","all",.true.,"none",2
@@ -172,6 +174,21 @@
 #"ocean_model","salt_flux","salt_flux","forcing_%4yr_%3dy","all",.true.,"none",2
 #
 
+"ice_shelf_model","area_shelf_h","area_shelf_h","ice","all",.false.,"none",2
+"ice_shelf_model","shelf_mass","shelf_mass","ice","all",.false.,"none",2
+"ice_shelf_model","h_shelf","h_shelf","ice","all",.false.,"none",2
+"ice_shelf_model","mass_flux","mass_flux","ice","all",.false.,"none",2
+"ice_shelf_model","melt","melt_rate","ice","all",.false.,"none",2
+"ice_shelf_model","thermal_driving","thermal_driving","ice","all",.false.,"none",2
+"ice_shelf_model","haline_driving","haline_driving","ice","all",.false.,"none",2
+"ice_shelf_model","sbdry","sbdry","ice","all",.false.,"none",2
+"ice_shelf_model","u_ml","u_ml","ice","all",.false.,"none",2
+"ice_shelf_model","v_ml","v_ml","ice","all",.false.,"none",2
+"ice_shelf_model","exch_vel_s","exch_vel_s","ice","all",.false.,"none",2
+"ice_shelf_model","exch_vel_t","exch_vel_t","ice","all",.false.,"none",2
+"ice_shelf_model","tfreeze","tfreeze","ice","all",.false.,"none",2
+"ice_shelf_model","tflux_shelf","tflux_shelf","ice","all",.false.,"none",2
+"ice_shelf_model","ustar_shelf","ustar_shelf","ice","all",.false.,"none",2
 
 #=============================================================================================
 #
