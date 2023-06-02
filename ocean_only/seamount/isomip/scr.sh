@@ -5,6 +5,7 @@
 # Files to modify if you change config:
 #       inp.txt    (seed file for input.nml)
 #       MOM_ov0    (seed file for MOM_override)
+#       this file  (if you want to change the run time)
 #       diag_table (maybe..)
 #    
 # Careful: thickness file filename is hardcoded in MOM_ovL 
