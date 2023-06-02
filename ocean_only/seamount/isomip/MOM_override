@@ -48,9 +48,12 @@
 
 #override VERBOSITY = 9
 
-!#override DRAG_BG_VEL = 0.05 ! Default is 0.00
+#override DRAG_BG_VEL = 0.15 ! Default is 0.00
 !#override KH = 6.0 ! ISOMIP Asay-Davis protocol, original is 0
-!#override KH = 100
+#override KH = 1000
+#override KV_ML_INVZ2 = 1e-4
+#override FIXED_DEPTH_LOTW_ML = True
+#override HMIX_FIXED = 2.0
 
 #override SHELF_THREE_EQN = True
 #override DEBUG_IS = True
@@ -60,7 +63,7 @@
 #override MASS_WEIGHT_IN_PRESSURE_GRADIENT = True
 #override BT_THICK_SCHEME = "FROM_BT_CONT"
 #override BBL_THICK_MIN = 2.0
-#override MIN_THICKNESS = 1e-9
+#override MIN_THICKNESS = 1e-8
 
 !!!!!!!!!!!!!!!!!  Thickness from  file??   !!!!!!!!
 

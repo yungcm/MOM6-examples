@@ -1,13 +1,13 @@
 "GOLD Experiment"
 1 1 1 0 0 0
-"prog",     300,"seconds",1,"days","Time"
-"mom",     300,"seconds",1,"days","Time"
-"forcing",     300,"seconds",1,"days","Time"
-"ice",     300,"seconds",1,"days","Time"
-#"prog",     1,"hours",1,"days","Time"
-#"mom",     1,"hours",1,"days","Time"
-#"forcing",     1,"hours",1,"days","Time"
-#"ice",     1,"hours",1,"days","Time"
+#"prog",     300,"seconds",1,"days","Time"
+#"mom",     300,"seconds",1,"days","Time"
+#"forcing",     300,"seconds",1,"days","Time"
+#"ice",     300,"seconds",1,"days","Time"
+"prog",     1,"hours",1,"days","Time"
+"mom",     1,"hours",1,"days","Time"
+"forcing",     1,"hours",1,"days","Time"
+"ice",     1,"hours",1,"days","Time"
 #"ave_prog", 5,"days",1,"days","Time",365,"days"
 #"cont_%4yr_%3dy",     5,"days",1,"days","Time",365,"days"
 #"mom_%4yr_%3dy",      5,"days",1,"days","Time",10,"days"
@@ -79,9 +79,16 @@
 #=======================
 
 "ocean_model","dudt","dudt","mom","all",.false.,"none",1
+"ocean_model","dvdt","dvdt","mom","all",.false.,"none",1
 "ocean_model","CAu","CAu","mom","all",.false.,"none",1
 "ocean_model","PFu","PFu","mom","all",.false.,"none",1
 "ocean_model","PFv","PFv","mom","all",.false.,"none",1
+"ocean_model","u_accel_bt","u_accel_bt","mom","all",.false.,"none",1
+"ocean_model","v_accel_bt","v_accel_bt","mom","all",.false.,"none",1
+"ocean_model","diffu","diffu","mom","all",.false.,"none",1
+"ocean_model","diffv","diffv","mom","all",.false.,"none",1
+"ocean_model","du_dt_visc","du_dt_visc","mom","all",.false.,"none",1
+"ocean_model","dv_dt_visc","dv_dt_visc","mom","all",.false.,"none",1
 
 #"ocean_model","dudt","dudt","mom_%4yr_%3dy","all",.true.,"none",2
 #"ocean_model","dvdt","dvdt","mom_%4yr_%3dy","all",.true.,"none",2

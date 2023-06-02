@@ -3,7 +3,6 @@
 #override REMAPPING_SCHEME = "PPM_IH4"
 
 !#override MIN_THICKNESS = 0.1
-#override MIN_THICKNESS = 1e-10
 
 #override NIGLOBAL = 240                  !
 !#override NIGLOBAL =  120                 !
@@ -52,8 +51,10 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #override MASS_WEIGHT_IN_PRESSURE_GRADIENT = True
-!#override BT_THICK_SCHEME = "FROM_BT_CONT"
-!#override BBL_THICK_MIN = 2.0
+#override BT_THICK_SCHEME = "FROM_BT_CONT"
+#override BBL_THICK_MIN = 2.0
+
+#override MIN_THICKNESS = 1e-9
 
 !!!!!!!!!!!!!!!!!  Thickness from  file??   !!!!!!!!
 
