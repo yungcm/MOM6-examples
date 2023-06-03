@@ -10,6 +10,7 @@ THICKNESS_FILE = '/INPUT/thickness.nc'
 ### (depends on MOM6 output in IC_FILE, ie. use after a run)
 def make_thickness_file(filename):
     
+    print(filename)
     ic = xr.open_dataset(di + '/' + IC_FILE)
     _, nz, ny, nx = ic.h.data.shape
 
@@ -24,3 +25,6 @@ def make_thickness_file(filename):
 
 def main():
     make_thickness_file(di + THICKNESS_FILE)
+
+if __name__ == "__main__":
+    main()
