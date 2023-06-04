@@ -89,6 +89,12 @@
 "ocean_model","diffv","diffv","mom","all",.false.,"none",1
 "ocean_model","du_dt_visc","du_dt_visc","mom","all",.false.,"none",1
 "ocean_model","dv_dt_visc","dv_dt_visc","mom","all",.false.,"none",1
+"ocean_model","dudt_dia","dudt_dia","mom","all",.false.,"none",1
+"ocean_model","dvdt_dia","dvdt_dia","mom","all",.false.,"none",1
+"ocean_model","gKEu","gKEu","mom","all",.false.,"none",1
+"ocean_model","gKEv","gKEv","mom","all",.false.,"none",1
+"ocean_model","rvxu","rvxu","mom","all",.false.,"none",1
+"ocean_model","rvxv","rvxv","mom","all",.false.,"none",1
 
 #"ocean_model","dudt","dudt","mom_%4yr_%3dy","all",.true.,"none",2
 #"ocean_model","dvdt","dvdt","mom_%4yr_%3dy","all",.true.,"none",2
