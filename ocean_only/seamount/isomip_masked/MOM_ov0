@@ -1,0 +1,102 @@
+#override USE_REGRIDDING = True
+#override REGRIDDING_COORDINATE_MODE = "SIGMA_SHELF_ZSTAR" 
+#override REMAPPING_SCHEME = "PPM_IH4"
+
+!#override MIN_THICKNESS = 0.1
+
+#override NIGLOBAL = 240                  !
+!#override NIGLOBAL =  120                 !
+#override NJGLOBAL = 40                   !
+#override NIHALO=4
+#override NJHALO=4
+#override NK=25
+
+#override GRID_CONFIG = "cartesian"       !
+#override AXIS_UNITS = "k"                ! default = "degrees"
+#override SOUTHLAT = 0.0                  !   [k]
+#override LENLAT = 80.0                   !   [k]
+#override WESTLON = 320.0                 !   [k] default = 0.0
+#override LENLON = 480.0                  !   [k]
+
+!#override TOPO_CONFIG = "ISOMIP"
+!#override TOPO_CONFIG = "flat"
+#override TOPO_CONFIG = "file"
+#override TOPO_FILE = "topogX.nc"
+
+#override MAXIMUM_DEPTH = 720.0           !   [m]
+
+#override DT = 300.0
+#override DTTHERM = 300.0
+
+#override ICE_PROFILE_CONFIG = "FILE"     !
+#override ICE_THICKNESS_FILE = "shelfX.nc" ! default = "ice_shelf_h.nc"
+!#override ICE_THICKNESS_FILE = "Ocean1_3D.nc" ! default = "ice_shelf_h.nc"
+#override ICE_THICKNESS_VARNAME = "thick" ! default = "h_shelf"
+#override ICE_AREA_VARNAME = "area"       ! default = "area_shelf_h"
+
+
+#override TS_CONFIG = "ISOMIP"
+
+#override ICE_SHELF = True
+#override TRIM_IC_FOR_P_SURF =  False      !   [Boolean] default = False
+!#override DYNAMIC_SURFACE_PRESSURE = True
+
+#override DT_FORCING = 300.0
+#override DTBT = -0.9
+
+#override IC_OUTPUT_FILE = "MOM_IC.nc"
+
+#override VERBOSITY = 9
+
+#override DRAG_BG_VEL = 0.15 ! Default is 0.00
+#override KV_ML_INVZ2 = 1e-4
+#override FIXED_DEPTH_LOTW_ML = True
+#override HMIX_FIXED = 2.0
+
+#override SHELF_THREE_EQN = True
+#override DEBUG_IS = True
+
+!#override LAPLACIAN = False
+!#override KH = 6.0 ! ISOMIP Asay-Davis protocol, original is 0
+#override KH = 10
+#override KH_BG_MIN = 10.0    
+#override KH_VEL_SCALE = 10.0
+!#override SMAGORINSKY_KH = True
+#override BIHARMONIC = True
+#override AH = 10.0
+#override AH_VEL_SCALE = 10.0
+#override AH_TIME_SCALE = 10.0
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!#override INTEGRAL_BT_CONTINUITY = True
+!#override ADJUST_BT_CONT = True
+!#override GRADUAL_BT_ICS = True
+!#override BT_USE_VISC_REM_U_UH0 = True
+!#override BT_PROJECT_VELOCITY = True
+!#override BT_NONLIN_STRESS = True
+!#override BT_STRONG_DRAG = True
+!#override BT_LINEAR_WAVE_DRAG = True
+!#override BEBT = 1.0
+#override MAXCFL_BT_CONT = 0.1
+#override DYNAMIC_SURFACE_PRESSURE = True
+#override ICE_LENGTH_DYN_PSURF = 1.0E+04
+#override DEPTH_MIN_DYN_PSURF = 1.0E-04
+#override CONST_DYN_PSURF = 0.9
+
+!#override BT_THICK_SCHEME = "ARITHMETIC" ! ARITHMETIC, HYBRID, HARMONIC
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#override TOPO_EDITS_FILE = "topoEdits.nc"
+#override MASKING_DEPTH = 0
+#override ALLOW_LANDMASK_CHANGES = True
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#override MASS_WEIGHT_IN_PRESSURE_GRADIENT = True
+#override BT_THICK_SCHEME = "FROM_BT_CONT"
+#override BBL_THICK_MIN = 2.0
+#override MIN_THICKNESS = 1e-4
+
+!!!!!!!!!!!!!!!!!  Thickness from  file??   !!!!!!!!
+
