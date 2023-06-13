@@ -1,0 +1,158 @@
+150c150
+< IC_OUTPUT_FILE = "ISOMIP_IC"    ! default = "MOM_IC"
+---
+> IC_OUTPUT_FILE = "MOM_IC.nc"    ! default = "MOM_IC"
+340,342c340,343
+<                                 ! Currently, the valid choices are "LINEAR", "UNESCO", "WRIGHT", "NEMO" and
+<                                 ! "TEOS10". This is only used if USE_EOS is true.
+< RHO_T0_S0 = 999.9106806711001   !   [kg m-3] default = 1000.0
+---
+>                                 ! Currently, the valid choices are "LINEAR", "UNESCO", "JACKETT_MCD", "WRIGHT",
+>                                 ! "WRIGHT_REDUCED", "WRIGHT_FULL", "NEMO", "ROQUET_RHO", "ROQUET_SPV" and
+>                                 ! "TEOS10".  This is only used if USE_EOS is true.
+> RHO_T0_S0 = 1000.0              !   [kg m-3] default = 1000.0
+355c356,357
+<                                 ! point.  Currently, the valid choices are "LINEAR", "MILLERO_78", "TEOS10"
+---
+>                                 ! point.  Currently, the valid choices are "LINEAR", "MILLERO_78", "TEOS_POLY",
+>                                 ! "TEOS10"
+466d467
+<                                 !  SLIGHT - stretched coordinates above continuous isopycnal
+490c491
+< MIN_THICKNESS = 1.0E-12         !   [m] default = 0.001
+---
+> MIN_THICKNESS = 1.0E-04         !   [m] default = 0.001
+494,495c495,496
+<                                 ! variables. It can be one of the following schemes: PCM         (1st-order
+<                                 ! accurate)
+---
+>                                 ! variables. It can be one of the following schemes:
+>                                 ! PCM         (1st-order accurate)
+507c508,509
+<                                 ! schemes: PCM         (1st-order accurate)
+---
+>                                 ! schemes:
+>                                 ! PCM         (1st-order accurate)
+580c582
+< DEBUG_IS = False                !   [Boolean] default = False
+---
+> DEBUG_IS = True                 !   [Boolean] default = False
+588c590
+< SHELF_THREE_EQN = False         !   [Boolean] default = True
+---
+> SHELF_THREE_EQN = True          !   [Boolean] default = True
+605,607c607,610
+< SHELF_2EQ_GAMMA_T = 1.0E-04     !   [m s-1]
+<                                 ! If SHELF_THREE_EQN is false, this the fixed turbulent exchange velocity at the
+<                                 ! ice-ocean interface.
+---
+> SHELF_S_ROOT = False            !   [Boolean] default = False
+>                                 ! If SHELF_S_ROOT = True, salinity at the ice/ocean interface (Sbdry) is
+>                                 ! computed from a quadratic equation. Otherwise, the previous interactive method
+>                                 ! to estimate Sbdry is used.
+612c615
+< ICE_SHELF_FLUX_FACTOR = 0.0     !   [none] default = 1.0
+---
+> ICE_SHELF_FLUX_FACTOR = 1.0     !   [none] default = 1.0
+620c623
+< ICE_SHELF_TEMPERATURE = -20.0   !   [degC] default = -15.0
+---
+> ICE_SHELF_TEMPERATURE = -15.0   !   [degC] default = -15.0
+629c632
+< COL_THICK_MELT_THRESHOLD = 1.0  !   [m] default = 0.0
+---
+> COL_THICK_MELT_THRESHOLD = 0.0  !   [m] default = 0.0
+644c647
+< CDRAG_SHELF = 0.0025            !   [nondim] default = 0.003
+---
+> CDRAG_SHELF = 0.003             !   [nondim] default = 0.003
+659c662
+< ICE_THICKNESS_FILE = "Ocean1_3D.nc" ! default = "ice_shelf_h.nc"
+---
+> ICE_THICKNESS_FILE = "shelfX.nc" ! default = "ice_shelf_h.nc"
+681a685
+>                                 !       by (THICKNESS_FILE).
+683a688,689
+>                                 !     mass_file - read thicknesses in units of mass per unit area from the file
+>                                 !       specified by (THICKNESS_FILE).
+744a751,754
+> REGRID_ACCELERATE_INIT = False  !   [Boolean] default = False
+>                                 ! If true, runs REGRID_ACCELERATE_ITERATIONS iterations of the regridding
+>                                 ! algorithm to push the initial grid to be consistent with the initial
+>                                 ! condition. Useful only for state-based and iterative coordinates.
+756,763d765
+< CONVERT_THICKNESS_UNITS = False !   [Boolean] default = False
+<                                 ! If true,  convert the thickness initial conditions from units of m to kg m-2
+<                                 ! or vice versa, depending on whether BOUSSINESQ is defined. This does not apply
+<                                 ! if a restart file is read.
+< REGRID_ACCELERATE_INIT = False  !   [Boolean] default = False
+<                                 ! If true, runs REGRID_ACCELERATE_ITERATIONS iterations of the regridding
+<                                 ! algorithm to push the initial grid to be consistent with the initial
+<                                 ! condition. Useful only for state-based and iterative coordinates.
+882c884
+< LINEAR_DRAG = False             !   [Boolean] default = False
+---
+> LINEAR_DRAG = True              !   [Boolean] default = False
+897c899
+< CDRAG = 0.003                   !   [nondim] default = 0.003
+---
+> CDRAG = 0.002                   !   [nondim] default = 0.003
+904c906
+< DRAG_BG_VEL = 0.0               !   [m s-1] default = 0.0
+---
+> DRAG_BG_VEL = 0.15              !   [m s-1] default = 0.0
+929c931
+< KV_TBL_MIN = 0.01               !   [m2 s-1] default = 1.0E-04
+---
+> KV_TBL_MIN = 1.0E-04            !   [m2 s-1] default = 1.0E-04
+936c938
+< KHTH = 0.0                      !   [m2 s-1] default = 0.0
+---
+> KHTH = 500.0                    !   [m2 s-1] default = 0.0
+1158c1160
+< KH = 0.0                        !   [m2 s-1] default = 0.0
+---
+> KH = 10.0                       !   [m2 s-1] default = 0.0
+1160c1162
+< KH_BG_MIN = 0.0                 !   [m2 s-1] default = 0.0
+---
+> KH_BG_MIN = 10.0                !   [m2 s-1] default = 0.0
+1162c1164
+< KH_VEL_SCALE = 0.0              !   [m s-1] default = 0.0
+---
+> KH_VEL_SCALE = 10.0             !   [m s-1] default = 0.0
+1186c1188
+< AH = 0.0                        !   [m4 s-1] default = 0.0
+---
+> AH = 10.0                       !   [m4 s-1] default = 0.0
+1188c1190
+< AH_VEL_SCALE = 0.001            !   [m s-1] default = 0.0
+---
+> AH_VEL_SCALE = 10.0             !   [m s-1] default = 0.0
+1192c1194
+< AH_TIME_SCALE = 0.0             !   [s] default = 0.0
+---
+> AH_TIME_SCALE = 10.0            !   [s] default = 0.0
+1250c1252
+< HARMONIC_BL_SCALE = 1.0         !   [nondim] default = 0.0
+---
+> HARMONIC_BL_SCALE = 0.0         !   [nondim] default = 0.0
+1254c1256
+< HMIX_FIXED = 20.0               !   [m]
+---
+> HMIX_FIXED = 2.0                !   [m]
+1257c1259
+< HMIX_STRESS = 20.0              !   [m] default = 20.0
+---
+> HMIX_STRESS = 2.0               !   [m] default = 2.0
+1262c1264
+< KV_ML_INVZ2 = 0.0               !   [m2 s-1] default = 0.0
+---
+> KV_ML_INVZ2 = 1.0E-04           !   [m2 s-1] default = 0.0
+1338c1340
+< DEPTH_MIN_DYN_PSURF = 1.0E-06   !   [m] default = 1.0E-06
+---
+> DEPTH_MIN_DYN_PSURF = 1.0E-04   !   [m] default = 1.0E-06
+1791,1792d1792
+< ADJUST_SALT = False             !   [Boolean] default = False
+<                                 ! If true, remove initial salt anomaly.

@@ -19,8 +19,8 @@
  &ocean_solo_nml
             months = 0
             date_init = 1,1,1,0,0,0
-            days = 2
-            hours = 0
+            days = 5
+            hours = 1
             minutes = 0
             seconds = 0
             calendar = 'julian' /

@@ -16,7 +16,6 @@
 #override LENLAT = 80.0                   !   [k]
 #override WESTLON = 320.0                 !   [k] default = 0.0
 #override LENLON = 480.0                  !   [k]
-#override F_0 = -1.408706225059977E-04
 
 !#override TOPO_CONFIG = "ISOMIP"
 !#override TOPO_CONFIG = "flat"
@@ -52,6 +51,9 @@
 #override KV_ML_INVZ2 = 1e-4
 #override FIXED_DEPTH_LOTW_ML = True
 #override HMIX_FIXED = 2.0
+
+!#override SHELF_THREE_EQN = True
+#override DEBUG_IS = True
 
 !#override LAPLACIAN = False
 !#override KH = 6.0 ! ISOMIP Asay-Davis protocol, original is 0
@@ -93,29 +95,9 @@
 #override MASS_WEIGHT_IN_PRESSURE_GRADIENT = True
 #override BT_THICK_SCHEME = "FROM_BT_CONT"
 #override BBL_THICK_MIN = 2.0
-#override MIN_THICKNESS = 1.0e-4
+#override MIN_THICKNESS = 1e-4
 
 #override SHELF_THERMO = True
-#override KVML = 1.0e-4
-
-#override USTAR_SHELF_BG = 0.001          !   [m s-1] default = 0.0
-                                ! The minimum value of ustar under ice shelves.
-#override CDRAG_SHELF = 0.0025            !   [nondim] default = 0.003
-                                ! CDRAG is the drag coefficient relating the magnitude of the velocity field to
-                                ! the surface stress.
-!#override DRAG_BG_VEL_SHELF = 0.001   ! required if USTAR_SHELF_BG = 0
-#override USTAR_SHELF_FROM_VEL = True
-
-#override SHELF_THREE_EQN = True
-!#override SHELF_THREE_EQN = False
-#override SHELF_2EQ_GAMMA_T = 1.0E-04
-#override COL_THICK_MELT_THRESHOLD = 1.0
-#override DEBUG_IS = True
-#override SHELF_S_ROOT = True
-!#override SHELF_S_ROOT = False
-#override ICE_SHELF_FLUX_FACTOR = 0.0
-!#override ICE_SHELF_FLUX_FACTOR = 1.0
-#override TFREEZE_FORM = "MILLERO_78"
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

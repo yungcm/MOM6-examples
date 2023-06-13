@@ -79,9 +79,16 @@
 #=======================
 
 "ocean_model","dudt","dudt","mom","all",.false.,"none",1
+"ocean_model","dvdt","dvdt","mom","all",.false.,"none",1
 "ocean_model","CAu","CAu","mom","all",.false.,"none",1
 "ocean_model","PFu","PFu","mom","all",.false.,"none",1
 "ocean_model","PFv","PFv","mom","all",.false.,"none",1
+"ocean_model","u_accel_bt","u_accel_bt","mom","all",.false.,"none",1
+"ocean_model","v_accel_bt","v_accel_bt","mom","all",.false.,"none",1
+"ocean_model","diffu","diffu","mom","all",.false.,"none",1
+"ocean_model","diffv","diffv","mom","all",.false.,"none",1
+"ocean_model","du_dt_visc","du_dt_visc","mom","all",.false.,"none",1
+"ocean_model","dv_dt_visc","dv_dt_visc","mom","all",.false.,"none",1
 
 #"ocean_model","dudt","dudt","mom_%4yr_%3dy","all",.true.,"none",2
 #"ocean_model","dvdt","dvdt","mom_%4yr_%3dy","all",.true.,"none",2

@@ -3,6 +3,7 @@
 #override REMAPPING_SCHEME = "PPM_IH4"
 
 !#override MIN_THICKNESS = 0.1
+#override MIN_THICKNESS = 1e-10
 
 #override NIGLOBAL = 240                  !
 !#override NIGLOBAL =  120                 !
@@ -48,17 +49,15 @@
 
 #override VERBOSITY = 9
 
+#override DRAG_BG_VEL = 0.05 ! Default is 0.00
+!#override KH = 6.0 ! ISOMIP Asay-Davis protocol, original is 0
+#override KH = 100
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #override MASS_WEIGHT_IN_PRESSURE_GRADIENT = True
-#override BT_THICK_SCHEME = "FROM_BT_CONT"
-#override BBL_THICK_MIN = 2.0
-
-#override MIN_THICKNESS = 1e-9
+!#override BT_THICK_SCHEME = "FROM_BT_CONT"
+!#override BBL_THICK_MIN = 2.0
 
 !!!!!!!!!!!!!!!!!  Thickness from  file??   !!!!!!!!
 
-#override THICKNESS_CONFIG = "thickness_file"     ! default = "uniform"
-#override THICKNESS_FILE = "thickness.nc"     ! default = "uniform"
-#override REMAP_AFTER_INITIALIZATION = False
-#override HACK_MODE = True

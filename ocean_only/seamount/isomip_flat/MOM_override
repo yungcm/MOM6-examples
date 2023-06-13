@@ -60,10 +60,6 @@
 !#override BBL_THICK_MIN = 2.0
 
 !!!!!!!!!!!!!!!!!  Thickness from  file??   !!!!!!!!
-
-!#override ADJUST_SALT = True
-
-!#override THICKNESS_CONFIG = "ISOMIP"     ! default = "uniform"
 #override THICKNESS_CONFIG = "thickness_file"     ! default = "uniform"
 #override THICKNESS_FILE = "thickness.nc"     ! default = "uniform"
 #override REMAP_AFTER_INITIALIZATION = False

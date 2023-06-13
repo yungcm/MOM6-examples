@@ -15,6 +15,7 @@
 #/bin/bash
 
 sed 's/days = X/days = 0/' < inp.txt > input.nml       # run for 0 days & 1 hour
+sed 's/X/300,"seconds"/' < diag > diag_table           # output every 300 seconds
 
 cat MOM_ov0 MOM_ovS > MOM_override                     # THICKNESS_CONFIG = "ISOMIP"
 
@@ -22,9 +23,11 @@ mpirun -n 2 ../../../build/ocean_only/MOM6
 
 python3 make_thickness_file.py                        # Careful!! thickness filename hardcoded in python script
 
-sed 's/days = X/days = 30/' < inp.txt > input.nml      # run for 1 day and 1 hour
+sed 's/days = X/days = 15/' < inp.txt > input.nml      # run for 1 day and 1 hour
+#sed 's/X/300,"seconds"/' < diag > diag_table          # output every 300 seconds
+sed 's/X/4,"hours"/' < diag > diag_table          # output every 300 seconds
 
 cat MOM_ov0 MOM_ovL > MOM_override                    # THICKNESS_CONFIG = "thickness_file"
 
-mpirun -n 2 ../../../build/ocean_only/MOM6
+mpirun -n 1 ../../../build/ocean_only/MOM6 > out
 
