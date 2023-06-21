@@ -1,4 +1,7 @@
+#override TRIM_IC_FOR_P_SURF =  False      !   [Boolean] default = False
+
 #override THICKNESS_CONFIG = "thickness_file"     ! default = "uniform"
 #override THICKNESS_FILE = "thickness.nc"     ! default = "uniform"
 #override REMAP_AFTER_INITIALIZATION = False
+!#override REMAP_AFTER_INITIALIZATION = True
 #override HACK_MODE = True

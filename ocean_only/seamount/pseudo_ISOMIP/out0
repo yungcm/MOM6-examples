@@ -1,0 +1,329 @@
+NOTE: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+&MPP_IO_NML
+ HEADER_BUFFER_VAL=16384      ,
+ GLOBAL_FIELD_ON_ROOT_PE=T,
+ IO_CLOCKS_ON=F,
+ SHUFFLE=0          ,
+ DEFLATE_LEVEL=-1         ,
+ CF_COMPLIANCE=F,
+ /
+NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+NOTE: MPP_DOMAINS_SET_STACK_SIZE: stack size set to   710000.
+NOTE: ======== Model being driven by MOM_driver ========
+NOTE: callTree: o Program MOM_main, MOM_driver.F90
+&OCEAN_SOLO_NML
+ DATE_INIT= 3*1          , 3*0          ,
+ CALENDAR="julian          ",
+ MONTHS=0          ,
+ DAYS=0          ,
+ HOURS=1          ,
+ MINUTES=0          ,
+ SECONDS=0          ,
+ OCEAN_NTHREADS=1          ,
+ USE_HYPER_THREAD=F,
+ /
+NOTE: open_param_file: MOM_input has been opened successfully.
+NOTE: open_param_file: MOM_override has been opened successfully.
+
+WARNING: MOM_file_parser : DT over-ridden.  Line: 'DT = 300.0' in file MOM_override.
+
+
+WARNING: MOM_file_parser : DTBT over-ridden.  Line: 'DTBT = -0.9' in file MOM_override.
+
+
+WARNING: MOM_file_parser : IC_OUTPUT_FILE over-ridden.  Line: 'IC_OUTPUT_FILE = "MOM_IC.nc"' in file MOM_override.
+
+
+WARNING: MOM_file_parser : NIGLOBAL over-ridden.  Line: 'NIGLOBAL = 240' in file MOM_override.
+
+
+WARNING: MOM_file_parser : NJGLOBAL over-ridden.  Line: 'NJGLOBAL = 40' in file MOM_override.
+
+
+WARNING: MOM_file_parser : NIHALO over-ridden.  Line: 'NIHALO = 4' in file MOM_override.
+
+
+WARNING: MOM_file_parser : NJHALO over-ridden.  Line: 'NJHALO = 4' in file MOM_override.
+
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_inc domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+NOTE: diag_manager_mod::diag_manager_init: prepend_date only supported when diag_manager_init is called with time_init present.
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+
+WARNING: MOM_file_parser : GRID_CONFIG over-ridden.  Line: 'GRID_CONFIG = "cartesian"' in file MOM_override.
+
+
+WARNING: MOM_file_parser : AXIS_UNITS over-ridden.  Line: 'AXIS_UNITS = "k"' in file MOM_override.
+
+
+WARNING: MOM_file_parser : SOUTHLAT over-ridden.  Line: 'SOUTHLAT = 0.0' in file MOM_override.
+
+
+WARNING: MOM_file_parser : LENLAT over-ridden.  Line: 'LENLAT = 80.0' in file MOM_override.
+
+
+WARNING: MOM_file_parser : LENLON over-ridden.  Line: 'LENLON = 480.0' in file MOM_override.
+
+
+WARNING: MOM_file_parser : TOPO_CONFIG over-ridden.  Line: 'TOPO_CONFIG = "flat"' in file MOM_override.
+
+
+WARNING: MOM_file_parser : MAXIMUM_DEPTH over-ridden.  Line: 'MAXIMUM_DEPTH = 720.0' in file MOM_override.
+
+
+WARNING: MOM_file_parser : NK over-ridden.  Line: 'NK = 25' in file MOM_override.
+
+ MOM h diag
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_Ice_Shelf_inc domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+
+WARNING: MOM_file_parser : DT_FORCING over-ridden.  Line: 'DT_FORCING = 300.0' in file MOM_override.
+
+NOTE: Initialize_ice_thickness_from_file: reading thickness
+
+WARNING: Ice shelf thickness initialized without setting the shelf mask from variable h_mask, which does not exist in INPUT/shelfX.nc
+
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+
+WARNING: MOM_file_parser : THICKNESS_CONFIG over-ridden.  Line: 'THICKNESS_CONFIG = "ISOMIP"' in file MOM_override.
+
+NOTE: ISOMIP_initialization.F90, ISOMIP_initialize_thickness: setting thickness
+
+WARNING: MOM_file_parser : TS_CONFIG over-ridden.  Line: 'TS_CONFIG = "ISOMIP"' in file MOM_override.
+
+ trim_for_ice()
+
+WARNING: MOM_file_parser : DRAG_BG_VEL over-ridden.  Line: 'DRAG_BG_VEL = 0.15' in file MOM_override.
+
+
+WARNING: MOM_file_parser : BBL_THICK_MIN over-ridden.  Line: 'BBL_THICK_MIN = 2.0' in file MOM_override.
+
+ MOM split
+
+WARNING: MOM_file_parser : KH over-ridden.  Line: 'KH = 10' in file MOM_override.
+
+
+WARNING: MOM_file_parser : KH_VEL_SCALE over-ridden.  Line: 'KH_VEL_SCALE = 10.0' in file MOM_override.
+
+
+WARNING: MOM_file_parser : BIHARMONIC over-ridden.  Line: 'BIHARMONIC = True' in file MOM_override.
+
+
+WARNING: MOM_file_parser : HMIX_FIXED over-ridden.  Line: 'HMIX_FIXED = 2.0' in file MOM_override.
+
+ initialize_dyn_() sfc diag
+
+WARNING: MOM_file_parser : BT_THICK_SCHEME over-ridden.  Line: 'BT_THICK_SCHEME = "FROM_BT_CONT"' in file MOM_override.
+
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+NOTE: MOM_ice_shelf.F90, initialize_ice_shelf: allocating fluxes.
+NOTE: MOM_ice_shelf.F90, initialize_ice_shelf: allocating forces.
+
+WARNING: Previous msg:DT_FORCING = 300.0              !   [s] default = 0.0
+
+
+WARNING: New message :DT_FORCING = 300.0              !   [s] default = 300.0
+
+
+WARNING: Encountered inconsistent documentation line for parameter DT_FORCING!
+
+NOTE: Segment run length determined from ocean_solo_nml.
+
+WARNING: Unused line in MOM_input : KVML = 0.0
+
+
+WARNING: Unused line in MOM_override : #override TOPO_FILE = "topogX.nc"
+
+
+WARNING: Unused line in MOM_override : #override DTTHERM = 300.0
+
+
+WARNING: MPP_OPEN: File ./CPU_stats opened WRONLY already exists!
+
+NOTE: MOM_surface_forcing: buoyancy forcing has been set to omitted.
+ find eta 3d
+ MOM eta diag
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     240000.
+NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     241000.
+NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     246000.
+NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     249600.
+
+WARNING: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
+
+MOM Day       0.000      0: En 9.404776E+02, MaxCFL  0.00000, Mass 1.727184403725E+16, Salt  34.22366704423, Temp  -1.90000000000
+    Total Energy: 43EC2DB04F5DBB33  1.6243782895483329E+19
+    Total Mass:   1.7271844037248482E+16, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Salt:   5.9110583957068312E+14, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
+    Total Heat:  -1.2880477690778055E+20, Change:   0.0000000000000000E+00 Error:  0.00000E+00 (-0.0E+00)
+ find eta 3d
+ find eta 3d
+ find eta 3d
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/dudt_dia) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/dvdt_dia) NOT registered
+
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ find eta 3d
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =  240
+  Y-AXIS =   40
+ MOM_Ice_Shelf_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =  120
+  Y-AXIS =   20
+
+WARNING: MPP_OPEN: File RESTART/ocean_solo.res opened WRONLY already exists!
+
+
+WARNING: MPP_OPEN: File exitcode opened WRONLY already exists!
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/area_shelf_h, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/shelf_mass, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/h_shelf, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/mass_flux, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/melt_rate, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/thermal_driving, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/haline_driving, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/sbdry, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/u_ml, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/v_ml, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/exch_vel_s, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/exch_vel_t, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/tfreeze, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/tflux_shelf, skip one time level, maybe send_data never called
+
+
+WARNING: diag_manager_mod::closing_file: module/output_field ice_shelf_model/ustar_shelf, skip one time level, maybe send_data never called
+
+ MPP_DOMAINS_STACK high water mark=           0
+
+Tabulating mpp_clock statistics across      1 PEs...
+
+                                          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
+Total runtime                        15.391134     15.391134     15.391134      0.000000  1.000     0     0     0
+Initialization                        0.778308      0.778308      0.778308      0.000000  0.051     0     0     0
+Main loop                            11.919100     11.919100     11.919100      0.000000  0.774     0     0     0
+Termination                           2.690923      2.690923      2.690923      0.000000  0.175     0     0     0
+ MPP_STACK high water mark=           0

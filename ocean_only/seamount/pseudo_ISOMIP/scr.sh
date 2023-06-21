@@ -18,13 +18,13 @@ sed 's/days = X/days = 0/' < inp.txt > input.nml       # run for 0 days & 1 hour
 
 cat MOM_ov0 MOM_ovS > MOM_override                     # THICKNESS_CONFIG = "ISOMIP"
 
-mpirun -n 2 ../../../build/ocean_only/MOM6
+mpirun -n 1 ../../../build/ocean_only/MOM6 > out0
 
 python3 make_thickness_file.py                        # Careful!! thickness filename hardcoded in python script
 
-sed 's/days = X/days = 5/' < inp.txt > input.nml      # run for 1 day and 1 hour
+sed 's/days = X/days = 0/' < inp.txt > input.nml      # run for 1 day and 1 hour
 
 cat MOM_ov0 MOM_ovL > MOM_override                    # THICKNESS_CONFIG = "thickness_file"
 
-mpirun -n 2 ../../../build/ocean_only/MOM6
+mpirun -n 1 ../../../build/ocean_only/MOM6 > out
 

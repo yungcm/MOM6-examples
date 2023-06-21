@@ -1,1 +1,11 @@
 #override THICKNESS_CONFIG = "ISOMIP"     ! default = "uniform"
+#override TRIM_IC_FOR_P_SURF =  True      !   [Boolean] default = False
+!#override TRIM_IC_FOR_P_SURF =  False      !   [Boolean] default = False
+#override SURFACE_PRESSURE_FILE = "shelfX.nc" !
+                                ! The initial condition file for the surface pressure exerted by ice.
+#override SURFACE_PRESSURE_VAR = "thick"  !   [Pa] default = ""
+                                ! The initial condition variable for the surface pressure exerted by ice.
+#override SURFACE_PRESSURE_SCALE = 8820.0 !   [file dependent] default = 1.0
+                                ! A scaling factor to convert SURFACE_PRESSURE_VAR from file
+                                ! SURFACE_PRESSURE_FILE into a surface pressure.
+#override TRIM_IC_Z_TOLERANCE = 1e-7
